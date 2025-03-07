@@ -55,8 +55,7 @@ async def parser_update(user_id, bot: Bot):
     new_results = []
 
     for result_new in result:
-        index = old_results.index(result_new)
-        if len(index) == 0:
+        if result_new not in old_results:
             new_results.append(result_new)
 
     if len(new_results) != 0:
